@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+<meta name="viewport"  content="width=device-width, initial-scale=1">
+<title>鼠标禁用示例</title>
+<style type="text/css">
+	a{
+		color: red;
+	}
+	.disable{
+		pointer-events: none;
+		color: #666;
+	}
+</style>
+</head>
+	<body>
+		<a href="#javascript" id="btn">发送验证码</a>
+		<input type="button" id="btn" value="免费获取验证码" onclick="settime(this)" /> 
+		<script type="text/javascript">
+			var obtn=document.getElementById('btn');
+			obtn.onclick=function(){
+				obtn.classList.add('disable');
+				setTimeout(function(){
+					obtn.classList.remove('disable');
+				},60000);
+			};
+		</script>
+		<script type="text/javascript"> 
+			var countdown=60; 
+			function settime(obj) { 
+   				if (countdown == 0) { 
+        			obj.removeAttribute("disabled");    
+        			obj.value="免费获取验证码"; 
+       				countdown = 60; 
+        			return;
+    			} else { 
+       				obj.setAttribute("disabled", true); 
+        			obj.value="重新发送(" + countdown + ")"; 
+        			countdown--; 
+    			} 
+				setTimeout(function(){settime(obj)} ,1000) 
+			}
+		</script>
+	</body>
+</html>
