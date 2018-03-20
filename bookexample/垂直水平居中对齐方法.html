@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>padding等比缩放</title>
+	<style type="text/css">
+		.box{
+			display: table-cell;/*使子元素垂直居中对齐方法1(会使基于margin的水平对其方法失效)*/
+			width: 500px;
+			height: 500px;
+			margin-left: auto; /*在父容器中水平居中对齐*/
+			margin-right: auto;/*在父容器中水平居中对齐*/
+			background-color: blue;
+			vertical-align: middle;/*使子元素垂直居中对齐方法1*/
+		}
+		.content{
+			width: 25%;
+			padding-bottom: 25%;/*根据父元素宽度的百分比*/
+			margin-left: auto;/*在父容器中水平居中对齐*/
+			margin-right: auto;/*在父容器中水平居中对齐*/
+			background-color: green;
+		}
+        .box1{
+			
+			width: 500px;
+			height: 500px;
+			margin-left: auto; /*在父容器中居中对齐*/
+			margin-right: auto;
+			background-color: blue;
+			position: relative;/*使子元素垂直居中对齐方法2*/
+		}
+		.content1{
+			width: 25%;
+			padding-bottom: 25%;
+			background-color: green;
+			top: 50%;
+			left: 50%;
+			position: absolute;/*使子元素垂直居中对齐方法2*/
+			transform: translate(-50%,-50%);/*使子元素垂直居中对齐方法2*/
+  		    -ms-transform: translate(-50%,-50%);/*使子元素垂直居中对齐方法2*/
+            -webkit-transform: translate(-50%,-50%);/*使子元素垂直居中对齐方法2*/
+   		    -moz-transform: translate(-50%,-50%);/*使子元素垂直居中对齐方法2*/
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="content"></div>	
+	</div>
+	<br/>
+	<div class="box1">
+		<div class="content1"></div>
+	</div>
+</body>
+</html>
