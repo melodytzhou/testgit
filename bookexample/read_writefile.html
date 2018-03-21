@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="way1">
+		<h2 class="articleTitle">写入和读取文件示例1</h2>
+		
+		<input type="file" id="myfile"/>
+		<input type="button" value="读取文件" onclick="readAsDataURL()" /> 
+		<br/>
+		<div id="result1" style="background-color: blue;width: 200px;height: 200px;"></div>
+	</div>
+	<div id="way2">
+		<h2 class="articleTitle">写入和读取文件示例2</h2>
+		<div id="result2" style="background-color: blue;width: 200px;height: 200px;display: inline-block;"></div>
+		<textarea  id="mytext" cols="25" rows="13"></textarea><br/>
+		<input type="button" id="mywrite" value="写入" onclick="owrite()"/>
+		<input type="button" id="myread" value="读取" onclick="oread()"/>
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/read_writefile.js"></script>
+</html>
