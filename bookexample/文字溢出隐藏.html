@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>text-overflow</title>
+</head>
+	<style type="text/css">
+		#p1{
+			width: 300px;
+			overflow: hidden;
+			white-space: pre;
+			text-overflow: ellipsis;
+		}
+		#p2{
+			width: 39ch; /*1ch=一个字符 2ch=一个中文字符*/
+			overflow: hidden;
+			white-space: pre;
+			text-overflow: ellipsis;
+		}
+	</style>
+<body>
+	<p id="p1">当你孤单你会想起谁，你想不想找个人来陪。</p>
+	<p id="p2">当你孤单你会想起谁，你想不想找个人来陪。</p>
+</body>
+</html>

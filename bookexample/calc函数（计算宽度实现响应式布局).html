@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>calc响应式布局</title>
+</head>
+	<style type="text/css">
+		.box img{
+			width: calc(25% - 40px);/*运算符前后需要保留空格*/
+			margin: 20px;
+			float: left;
+		}
+		@media(max-width: 600px){
+			.box img{
+				width: calc(50% - 40px);
+			}
+			
+		}
+	</style>
+<body>
+	<div class="box">
+		<img src="picture/test1.jpg" alt="" id="item1">
+		<img src="picture/test1.jpg" alt="" id="item2">
+		<img src="picture/test1.jpg" alt="" id="item3">
+		<img src="picture/test1.jpg" alt="" id="item4">
+	</div>
+</body>
+</html>
